@@ -1,0 +1,105 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:opsz,wght@6..72,800&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Newsreader", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: pink;
+}
+
+h1 {
+  font-family: "Gloock", cursive;
+  font-size: 40px;
+  border-bottom: 8px solid rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 1px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  transition: flex 0.7s ease-in;
+  position: relative;
+  
+}
+
+.panel h3 {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 5px;
+}
+
+span {
+  font-size: 20px;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 20px;
+  left: 200px;
+  margin: 0;
+  opacity: 0;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  border: 5px solid rgb(0, 0, 0);
+  background-color: rgb(255, 0, 242);
+  padding: 10px;
+  font-weight: 600;
+}
+
+.panel.active {
+ flex: 5; 
+ border: 10px solid black;
+}
+
+.panel.active h3, .panel.active span {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.6s;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 36px;
+  transition: font-size 0.3s ease-in 0.4s;
+}
+
+.panel.active span {
+  font-size: 22px;
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100vh;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+
+  body {
+    overflow: scroll;
+  }
+
+  .panel.active {
+    width: 70vw;
+  }
+
+}
