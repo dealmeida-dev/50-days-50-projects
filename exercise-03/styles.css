@@ -18,6 +18,8 @@ img {
 
 .container {
   background-color: #fafafa;
+  
+
   transform-origin: top left;
   transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
   width: 100vw;
